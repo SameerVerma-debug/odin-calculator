@@ -52,6 +52,10 @@ for (let operand of operands) {
 
 for (let op of operators) {
   op.addEventListener("click", function (e) {
+    //Allow only one operator to be considered at a time
+    if(operator != null && displayValue == operator){
+      return;
+    }
     //first operation
     if (operator === null) {
       operator = e.target.value;
@@ -89,7 +93,6 @@ clear.addEventListener("click", function (e) {
 
 //Displays the final output of operations
 equalTo.addEventListener("click", function (e) {
-  //
   if (operator === null) {
     displayValue = displayValue;
   } else{

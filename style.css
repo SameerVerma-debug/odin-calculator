@@ -15,7 +15,7 @@ body{
   display: grid;
   grid-template-columns: repeat(4,100px);
   border:10px solid rgba(151, 129, 129, 0.236);
-  gap:4px;
+  gap:8px;
   padding:5px;
   background-color: black;
   border-radius:10px;
@@ -30,21 +30,32 @@ body{
   font-size:80px;
   height: 100px;
   margin-bottom:7px;
+  border-radius: 5px;
 }
 
 button{
   background-color: #217c7e;
   border:none;
   height:100px;
-  border-radius: 7px;
+  border-radius: 5px;
+  transition: opacity 1;
 }
 
 button:active{
   opacity: 0.8;
 }
 
+button:hover{
+  cursor:pointer;
+  scale:1.05;
+}
+
 .operator{
   background-color: #FF8F1F;
+}
+
+.operator:focus{
+  opacity:0.8;
 }
 
 .equalTo{
